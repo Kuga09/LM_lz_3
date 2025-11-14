@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from keras.preprocessing import image
 
+
 def model_mnist():
     # Загрузка данных и преобразование
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -44,6 +45,7 @@ def model_mnist():
 def my_image(model, img_path):
     # Загрузка моей картинки
     img = image.load_img(img_path, color_mode="grayscale", target_size=(28,28))
+    # Показ загруженного изображения
     plt.imshow(img, cmap="gray")
     plt.title("Загруженная картинка")
     plt.show()
@@ -56,4 +58,7 @@ def my_image(model, img_path):
     prediction = model.predict(img_array)
     predicted_class = np.argmax(prediction)
     print("Предсказанная цифра:", predicted_class)
+
     return predicted_class
+
+#https://studymachinelearning.com/save-and-load-keras-model/
