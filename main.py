@@ -1,8 +1,11 @@
+# Импорт функций
 from programm import model_mnist, my_image
 
-if __name__ == "__main__":
-    # Обучаем модель
+# Функия main
+def main():
     model = model_mnist()
 
-    # Проверяем на сторонней картинке
     my_image(model, "cifra.png")
+
+if __name__ == "__main__":
+    main()
