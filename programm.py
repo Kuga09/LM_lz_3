@@ -56,9 +56,7 @@ def my_image(model, img_path):
 
     # Предсказание
     prediction = model.predict(img_array)
-    predicted_class = np.argmax(prediction)
-    print("Предсказанная цифра:", predicted_class)
+    predicted = np.argmax(prediction)
+    print("Предсказанная цифра:", predicted)
 
-    return predicted_class
-
-#https://studymachinelearning.com/save-and-load-keras-model/
+    return predicted
